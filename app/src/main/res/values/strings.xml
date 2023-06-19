@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Minstagram</string>
+
+    <!--    탭-->
+    <string name="tab_home">홈</string>
+    <string name="tab_search">검색</string>
+    <string name="tab_upload">업로드</string>
+    <string name="tab_heart">좋아요</string>
+    <string name="tab_mypage">마이페이지</string>
+
 </resources>
