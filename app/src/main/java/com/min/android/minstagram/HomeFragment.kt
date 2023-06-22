@@ -14,8 +14,8 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var feedList: ArrayList<Feed> = arrayListOf(
-        Feed("brille_cercle", "", "", 125155, false, false),
-        Feed("kiminki_", "", "", 1, false, false),
+        Feed("brille_cercle", "https://www.city.kr/files/attach/images/238/070/524/028/34e73b93f37667ef06ef6a6fff36a324.jpg", "https://www.city.kr/files/attach/images/238/070/524/028/34e73b93f37667ef06ef6a6fff36a324.jpg", 125155, false, false),
+        Feed("kiminki_", "https://www.city.kr/files/attach/images/238/070/524/028/34e73b93f37667ef06ef6a6fff36a324.jpg", "https://www.city.kr/files/attach/images/238/070/524/028/34e73b93f37667ef06ef6a6fff36a324.jpg", 1, false, false),
         Feed("ssgheejun", "", "", 1, false, false),
         Feed("brille_cercle", "", "", 124424, false, false),
         Feed("brille_cercle", "", "", 345345, false, false),
@@ -27,7 +27,7 @@ class HomeFragment : Fragment() {
     )
 
     private var storyList: ArrayList<Story> = arrayListOf(
-        Story("brille_cercle", ""),
+        Story("brille_cercle", "https://www.city.kr/files/attach/images/238/070/524/028/34e73b93f37667ef06ef6a6fff36a324.jpg"),
         Story("kiminki_", ""),
         Story("ssgheejun", ""),
         Story("brille_cercle", ""),

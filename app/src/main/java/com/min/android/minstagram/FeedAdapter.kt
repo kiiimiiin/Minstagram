@@ -2,9 +2,12 @@ package com.min.android.minstagram
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.ShapeDrawable
+import android.graphics.drawable.shapes.OvalShape
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.min.android.minstagram.databinding.ItemHomeFeedBinding
 import java.lang.StringBuilder
 
@@ -21,6 +24,10 @@ class FeedAdapter(private val context: MainActivity, private val dataList: Array
                 .append(context.resources.getString(R.string.home_like_count_after))
             binding.feedTvLikeCount.text = likeCount
 
+            Glide.with(context).load(item.profileImageUrl).into(binding.feedIvProfile)
+            Glide.with(context).load(item.imageUrl).into(binding.feedIvImage)
+            binding.feedIvProfile.background = ShapeDrawable(OvalShape())
+            binding.feedIvProfile.clipToOutline = true
 //          좋아요 버튼
             binding.feedBtnHeart.setOnClickListener {
                 if (item.isLike) {

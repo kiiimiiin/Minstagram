@@ -1,9 +1,12 @@
 package com.min.android.minstagram
 
 import android.content.Context
+import android.graphics.drawable.ShapeDrawable
+import android.graphics.drawable.shapes.OvalShape
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.min.android.minstagram.databinding.ItemHomeStoryBinding
 
 class StoryAdapter(private val context: MainActivity, private val dataList: ArrayList<Story>) :
@@ -13,6 +16,12 @@ class StoryAdapter(private val context: MainActivity, private val dataList: Arra
         RecyclerView.ViewHolder(binding.root) {
         fun bind(context: Context, item: Story) {
             binding.storyTvUserId.text = item.userId
+
+            Glide.with(context).load(item.profileImageUrl).into(binding.storyIvProfile)
+
+            binding.storyIvProfile.background = ShapeDrawable(OvalShape())
+            binding.storyIvProfile.clipToOutline = true
+
         }
     }
 
