@@ -1,5 +1,6 @@
 package com.min.android.minstagram
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -43,5 +44,11 @@ class SearchFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.searchRvRecommend.layoutManager = GridLayoutManager(activity, 3)
         binding.searchRvRecommend.adapter = RecommendAdapter(activity as MainActivity, imageList)
+
+        binding.searchLl.setOnClickListener{
+            Intent(context, SearchActivity::class.java).apply{
+
+            }.run { context?.startActivity(this)}
+        }
     }
 }

@@ -15,4 +15,5 @@
 
     <!--    검색-->
     <string name="searh_text">검색</string>
+    <string name="search_newly_keyword">최근 검색</string>
 </resources>
