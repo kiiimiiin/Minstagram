@@ -12,4 +12,7 @@
     <string name="home_like_count_before">좋아요</string>
     <string name="home_like_count_after">개</string>
     <string name="home_my_story">내 스토리</string>
+
+    <!--    검색-->
+    <string name="searh_text">검색</string>
 </resources>

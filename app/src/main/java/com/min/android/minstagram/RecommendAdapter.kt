@@ -8,24 +8,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.min.android.minstagram.databinding.ItemHomeStoryBinding
+import com.min.android.minstagram.databinding.ItemSearchRecommendBinding
 
-class StoryAdapter(private val context: MainActivity, private val dataList: ArrayList<Story>) :
-    RecyclerView.Adapter<StoryAdapter.ViewHolder>() {
+class RecommendAdapter(private val context: MainActivity, private val dataList: ArrayList<String>) :
+    RecyclerView.Adapter<RecommendAdapter.ViewHolder>() {
 
-    class ViewHolder(private val binding: ItemHomeStoryBinding) :
+    class ViewHolder(private val binding: ItemSearchRecommendBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(context: Context, item: Story) {
-            binding.storyTvUserId.text = item.userId
-
-            Glide.with(context).load(item.profileImageUrl).into(binding.storyIvProfile)
-            binding.storyIvProfile.background = ShapeDrawable(OvalShape())
-            binding.storyIvProfile.clipToOutline = true
-
+        fun bind(context: Context, item: String) {
+            Glide.with(context).load(item).into(binding.recommendIv)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemHomeStoryBinding.inflate(LayoutInflater.from(context), parent, false)
+        val binding = ItemSearchRecommendBinding.inflate(LayoutInflater.from(context), parent, false)
         return ViewHolder(binding)
     }
 
